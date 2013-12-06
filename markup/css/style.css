@@ -316,10 +316,13 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+/* line 183, ../sass/_main.scss */
+#content-holder .content .prod-list {
   overflow: hidden;
 }
-/* line 184, ../sass/_main.scss */
-#content-holder .content li {
+/* line 186, ../sass/_main.scss */
+#content-holder .content .prod-list li {
   float: left;
   width: 203px;
   height: 237px;
@@ -332,14 +335,14 @@ body {
   padding: 10px;
   margin: 0 20px 20px 0;
 }
-/* line 193, ../sass/_main.scss */
-#content-holder .content li .loc-header-setter {
+/* line 195, ../sass/_main.scss */
+#content-holder .content .prod-list li .loc-header-setter {
   height: 26px;
   background: rgba(0, 0, 0, 0.47);
   padding: 11px 0 0 12px;
 }
-/* line 198, ../sass/_main.scss */
-#content-holder .content li .loc-header-setter span {
+/* line 200, ../sass/_main.scss */
+#content-holder .content .prod-list li .loc-header-setter span {
   float: right;
   width: 23px;
   height: 20px;
@@ -349,25 +352,25 @@ body {
   background: url("../images/sprites/icon-review.png") 0 2px no-repeat;
   color: #545252;
 }
-/* line 209, ../sass/_main.scss */
-#content-holder .content li .loc-header-setter h2 {
+/* line 211, ../sass/_main.scss */
+#content-holder .content .prod-list li .loc-header-setter h2 {
   overflow: hidden;
 }
-/* line 212, ../sass/_main.scss */
-#content-holder .content li .loc-header-setter h2 a {
+/* line 214, ../sass/_main.scss */
+#content-holder .content .prod-list li .loc-header-setter h2 a {
   color: #5d5d5d;
   text-decoration: none;
 }
-/* line 216, ../sass/_main.scss */
-#content-holder .content li .loc-header-setter h2 a:hover {
+/* line 218, ../sass/_main.scss */
+#content-holder .content .prod-list li .loc-header-setter h2 a:hover {
   text-decoration: underline;
 }
-/* line 223, ../sass/_main.scss */
-#content-holder .content li .prod-img-holder {
+/* line 225, ../sass/_main.scss */
+#content-holder .content .prod-list li .prod-img-holder {
   margin: 0 0 13px;
 }
-/* line 226, ../sass/_main.scss */
-#content-holder .content li .prod-img-holder .prod-img {
+/* line 228, ../sass/_main.scss */
+#content-holder .content .prod-list li .prod-img-holder .prod-img {
   width: 203px;
   height: 169px;
   background: rgba(0, 0, 0, 0.24);
@@ -375,23 +378,80 @@ body {
   text-align: center;
   vertical-align: middle;
 }
-/* line 236, ../sass/_main.scss */
-#content-holder .content li .loc-footer {
+/* line 238, ../sass/_main.scss */
+#content-holder .content .prod-list li .loc-footer {
   padding: 0 0 0 2px;
 }
-/* line 239, ../sass/_main.scss */
-#content-holder .content li .loc-footer .rate-text {
+/* line 241, ../sass/_main.scss */
+#content-holder .content .prod-list li .loc-footer .rate-text {
   float: right;
   margin: 0 5px 0 0;
 }
-/* line 243, ../sass/_main.scss */
-#content-holder .content li .loc-footer .rate-text a {
+/* line 245, ../sass/_main.scss */
+#content-holder .content .prod-list li .loc-footer .rate-text a {
   color: #5d5d5d;
   font-size: 11px;
   line-height: 14px;
   text-decoration: none;
 }
-/* line 249, ../sass/_main.scss */
-#content-holder .content li .loc-footer .rate-text a:hover {
+/* line 251, ../sass/_main.scss */
+#content-holder .content .prod-list li .loc-footer .rate-text a:hover {
   text-decoration: underline;
+}
+/* line 262, ../sass/_main.scss */
+#content-holder .content .page-holder {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  height: 36px;
+  padding: 11px 0 0 17px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  margin: 0 17px 0 0;
+}
+/* line 272, ../sass/_main.scss */
+#content-holder .content .page-holder .page-number {
+  float: right;
+  margin: 0 5px 0 0;
+}
+/* line 276, ../sass/_main.scss */
+#content-holder .content .page-holder .page-number ul {
+  overflow: hidden;
+}
+/* line 280, ../sass/_main.scss */
+#content-holder .content .page-holder .page-number li {
+  float: left;
+  height: 27px;
+  width: 30px;
+  margin: 0 5px 0 0;
+}
+/* line 286, ../sass/_main.scss */
+#content-holder .content .page-holder .page-number li a {
+  display: block;
+  line-height: 27px;
+  color: #393939;
+  text-decoration: none;
+  background: #1c1c1c;
+  text-align: center;
+}
+/* line 294, ../sass/_main.scss */
+#content-holder .content .page-holder .page-number li a:hover {
+  background: dimgrey;
+}
+/* line 300, ../sass/_main.scss */
+#content-holder .content .page-holder .page-number .active {
+  background: #0b0b0b;
+}
+/* line 305, ../sass/_main.scss */
+#content-holder .content .page-holder .page-info {
+  color: #4a4a4a;
+  padding: 5px 0 0;
+}
+/* line 309, ../sass/_main.scss */
+#content-holder .content .page-holder .page-info strong {
+  color: #757575;
 }

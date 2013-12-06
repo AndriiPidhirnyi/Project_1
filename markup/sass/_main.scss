@@ -179,80 +179,139 @@ body {
 		padding: 20px 10px 0 6px;
 		width: $page-width;
 		@include center-block();
-		overflow: hidden;
 
-		li {
-			float: left;
-			width: 203px;
-			height: 237px;
+		.prod-list {
+			overflow: hidden;
+
+			li {
+				float: left;
+				width: 203px;
+				height: 237px;
+				background: rgba(0,0,0,0.2);
+				@include border-radius(10px);
+				padding: 10px;
+				margin: 0 20px 20px 0;
+
+				.loc-header-setter {
+					height: 26px;
+					background: rgba(0,0,0,0.47);
+					padding: 11px 0 0 12px;
+
+					span {
+						float: right;
+						width: 23px;
+						height: 20px;
+						margin: 0 9px 0 0;
+						font-weight: bold;
+						padding: 0 0 0 21px;
+						background: url("../images/sprites/icon-review.png") 0 2px no-repeat;
+						color: #545252;
+					}
+
+					h2{
+						overflow: hidden;
+
+						a {
+							color: #5d5d5d;
+							text-decoration: none;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+
+				.prod-img-holder {
+					margin: 0 0 13px;
+
+					.prod-img {
+						width: 203px;
+						height: 169px;
+						background: rgba(0,0,0,0.24);
+						display: table-cell;
+						text-align: center;
+						vertical-align: middle;
+					}
+				}
+
+				.loc-footer {
+					padding: 0 0 0 2px;
+
+					.rate-text {
+						float: right;
+						margin: 0 5px 0 0;
+
+						a {
+							color: #5d5d5d;
+							font-size: 11px;
+							line-height: 14px;
+							text-decoration: none;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+			}
+		}
+		}
+
+
+
+		.page-holder {
 			background: rgba(0,0,0,0.2);
 			@include border-radius(10px);
-			padding: 10px;
-			margin: 0 20px 20px 0;
+			height: 36px;
+			padding: 11px 0 0 17px;
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: bold;
+			margin: 0 17px 0 0;
 
-			.loc-header-setter {
-				height: 26px;
-				background: rgba(0,0,0,0.47);
-				padding: 11px 0 0 12px;
+			.page-number {
+				float: right;
+				margin: 0 5px 0 0;
 
-				span {
-					float: right;
-					width: 23px;
-					height: 20px;
-					margin: 0 9px 0 0;
-					font-weight: bold;
-					padding: 0 0 0 21px;
-					background: url("../images/sprites/icon-review.png") 0 2px no-repeat;
-					color: #545252;
-				}
-
-				h2{
+				ul {
 					overflow: hidden;
-
-					a {
-						color: #5d5d5d;
-						text-decoration: none;
-
-						&:hover {
-							text-decoration: underline;
-						}
-					}
 				}
-			}
 
-			.prod-img-holder {
-				margin: 0 0 13px;
-
-				.prod-img {
-					width: 203px;
-					height: 169px;
-					background: rgba(0,0,0,0.24);
-					display: table-cell;
-					text-align: center;
-					vertical-align: middle;
-				}
-			}
-
-			.loc-footer {
-				padding: 0 0 0 2px;
-
-				.rate-text {
-					float: right;
+				li {
+					float: left;
+					height: 27px;
+					width: 30px;
 					margin: 0 5px 0 0;
 
-					a {
-						color: #5d5d5d;
-						font-size: 11px;
-						line-height: 14px;
+					a{
+						display: block;
+						line-height: 27px;
+						color: #393939;
 						text-decoration: none;
+						background: #1c1c1c;
+						text-align: center;
 
 						&:hover {
-							text-decoration: underline;
+							background: lighten(#1c1c1c, 30%);
 						}
 					}
+				}
+
+				.active {
+					background: #0b0b0b;
+				}
+			}
+
+			.page-info {
+				color: #4a4a4a;
+				padding: 5px 0 0;
+
+				strong {
+					color: #757575;
 				}
 			}
 		}
+
 	}
 
 }
