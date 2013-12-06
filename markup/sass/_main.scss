@@ -1,5 +1,7 @@
 @import "base";
-
+@import "custom-form";
+@import "compass/css3/images";
+@import "compass/css3/border-radius";
 // import main stylesheet
 
 body {
@@ -13,9 +15,122 @@ body {
 
 .header-holder {
 	@extend #wrapper;
-	@include border-top($header-top-bor-col,2px);
-	@include border-bottom($header-bot-bor-col,2px);
-	height: 200px;
+	height: $header-holder-height;
+	@include border-top ($bg-header-border, 1px);
+	@include background-image(linear-gradient($bg-head-hold-top, $bg-head-hold-bot));
+	padding:11px 0 0;
+
+	.header-box {
+		height: $header-height;
+		@include background-image(linear-gradient($bg-header-top, $bg-header-bot));
+
+		#header {
+			width: $page-width;
+			@include center-block();
+			padding: 0 0px 0 13px;
+			overflow: hidden;
+
+			#logo {
+				float: left;
+				width: 268px;
+				height: 60px;
+				margin: 33px 0 0;
+				background: url(../images/logo.png);
+
+				a {
+					display: block;
+					text-indent: -9999px;
+					height: 100%;
+				}
+			}
+
+			.search-holder {
+				height: $search-holder-height;
+				float: right;
+				margin: 0 13px 0 0;
+
+				.search-content {
+					height: 100%;
+					max-width: 390px;
+					padding: 7px 20px 0 22px;
+					background: url("../images/bg-left-side.png"), url("../images/bg-right-side.png"),url("../images/bg-search.gif");
+					background-position: top left, top right, top left;
+					background-repeat: no-repeat, no-repeat, repeat-x;
+
+					& span {
+						height: 16px;
+						font-size:11px;
+						display: inline-block;
+						background: url("../images/sprites/logo-rss.png") no-repeat;
+						color: #6e6e6e;
+						padding: 2px 0 0 27px;
+						vertical-align: top;
+					}
+
+					.subscribe-holder {
+						margin: 0 0 11px 4px;
+					}
+
+					.add-nav {
+						display: inline-block;
+						line-height: 16px;
+
+						li {
+							float: left;
+							padding: 0 6px;
+							background: url("../images/sprites/sep-add-nav.gif") 0 4px no-repeat;
+
+							&:first-child {
+								background: none;
+							}
+
+							a {
+								font-size: 11px;
+								color: #a9a9a9;
+								text-decoration: none;
+								&:hover {
+									text-decoration: underline;
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			.sub-nav {
+				font-size: 11px;
+				float: right;
+				padding: 10px 0 0;
+				max-width: 330px;
+
+				li{
+					float: left;
+					padding: 0 14px 0 15px;
+					background: url("../images/separ-sub-nav.gif") 100% 1px no-repeat;
+
+
+					&:last-child {
+						background: none;
+						padding: 0 7px 0 15px;
+					}
+
+					a {
+						text-decoration: none;
+						color: $txt-color-sub-navy;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+
+		}
+	}
+
+
 }
 
 .main-nav {
