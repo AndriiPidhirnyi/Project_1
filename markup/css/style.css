@@ -133,13 +133,12 @@ body {
 }
 
 /* line 12, ../sass/_main.scss */
-#wrapper, .header-holder, .main-nav, .footer-holder {
+#wrapper, .header-holder, #main-nav, #content-holder, .footer-holder {
   width: 100%;
 }
 
 /* line 16, ../sass/_main.scss */
 .header-holder {
-  height: 141px;
   border-top: solid #464646;
   border-top-width: 1px;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #252525), color-stop(100%, #131313));
@@ -157,8 +156,9 @@ body {
   background-image: -moz-linear-gradient(#2d2d2d, #181818);
   background-image: -o-linear-gradient(#2d2d2d, #181818);
   background-image: linear-gradient(#2d2d2d, #181818);
+  margin: 0 0 10px;
 }
-/* line 27, ../sass/_main.scss */
+/* line 28, ../sass/_main.scss */
 .header-holder .header-box #header {
   width: 969px;
   display: block;
@@ -167,7 +167,7 @@ body {
   padding: 0 0px 0 13px;
   overflow: hidden;
 }
-/* line 33, ../sass/_main.scss */
+/* line 34, ../sass/_main.scss */
 .header-holder .header-box #header #logo {
   float: left;
   width: 268px;
@@ -175,19 +175,19 @@ body {
   margin: 33px 0 0;
   background: url(../images/logo.png);
 }
-/* line 40, ../sass/_main.scss */
+/* line 41, ../sass/_main.scss */
 .header-holder .header-box #header #logo a {
   display: block;
   text-indent: -9999px;
   height: 100%;
 }
-/* line 47, ../sass/_main.scss */
+/* line 48, ../sass/_main.scss */
 .header-holder .header-box #header .search-holder {
   height: 88px;
   float: right;
   margin: 0 13px 0 0;
 }
-/* line 52, ../sass/_main.scss */
+/* line 53, ../sass/_main.scss */
 .header-holder .header-box #header .search-holder .search-content {
   height: 100%;
   max-width: 390px;
@@ -196,7 +196,7 @@ body {
   background-position: top left, top right, top left;
   background-repeat: no-repeat, no-repeat, repeat-x;
 }
-/* line 60, ../sass/_main.scss */
+/* line 61, ../sass/_main.scss */
 .header-holder .header-box #header .search-holder .search-content span {
   height: 16px;
   font-size: 11px;
@@ -206,59 +206,107 @@ body {
   padding: 2px 0 0 27px;
   vertical-align: top;
 }
-/* line 70, ../sass/_main.scss */
+/* line 71, ../sass/_main.scss */
 .header-holder .header-box #header .search-holder .search-content .subscribe-holder {
   margin: 0 0 11px 4px;
 }
-/* line 74, ../sass/_main.scss */
+/* line 75, ../sass/_main.scss */
 .header-holder .header-box #header .search-holder .search-content .add-nav {
   display: inline-block;
   line-height: 16px;
 }
-/* line 78, ../sass/_main.scss */
+/* line 79, ../sass/_main.scss */
 .header-holder .header-box #header .search-holder .search-content .add-nav li {
   float: left;
   padding: 0 6px;
   background: url("../images/sprites/sep-add-nav.gif") 0 4px no-repeat;
 }
-/* line 83, ../sass/_main.scss */
+/* line 84, ../sass/_main.scss */
 .header-holder .header-box #header .search-holder .search-content .add-nav li:first-child {
   background: none;
 }
-/* line 87, ../sass/_main.scss */
+/* line 88, ../sass/_main.scss */
 .header-holder .header-box #header .search-holder .search-content .add-nav li a {
   font-size: 11px;
   color: #a9a9a9;
   text-decoration: none;
 }
-/* line 91, ../sass/_main.scss */
+/* line 92, ../sass/_main.scss */
 .header-holder .header-box #header .search-holder .search-content .add-nav li a:hover {
   text-decoration: underline;
 }
-/* line 101, ../sass/_main.scss */
+/* line 102, ../sass/_main.scss */
 .header-holder .header-box #header .sub-nav {
   font-size: 11px;
   float: right;
   padding: 10px 0 0;
   max-width: 330px;
 }
-/* line 107, ../sass/_main.scss */
+/* line 108, ../sass/_main.scss */
 .header-holder .header-box #header .sub-nav li {
   float: left;
   padding: 0 14px 0 15px;
   background: url("../images/separ-sub-nav.gif") 100% 1px no-repeat;
 }
-/* line 113, ../sass/_main.scss */
+/* line 114, ../sass/_main.scss */
 .header-holder .header-box #header .sub-nav li:last-child {
   background: none;
   padding: 0 7px 0 15px;
 }
-/* line 118, ../sass/_main.scss */
+/* line 119, ../sass/_main.scss */
 .header-holder .header-box #header .sub-nav li a {
   text-decoration: none;
   color: #616161;
 }
-/* line 122, ../sass/_main.scss */
+/* line 123, ../sass/_main.scss */
 .header-holder .header-box #header .sub-nav li a:hover {
   text-decoration: underline;
+}
+
+/* line 137, ../sass/_main.scss */
+#main-nav {
+  border-top: solid #474747;
+  border-top-width: 1px;
+  border-bottom: solid #161616;
+  border-bottom-width: 1px;
+  height: 43px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #272727));
+  background-image: -webkit-linear-gradient(#333333, #272727);
+  background-image: -moz-linear-gradient(#333333, #272727);
+  background-image: -o-linear-gradient(#333333, #272727);
+  background-image: linear-gradient(#333333, #272727);
+  text-align: center;
+}
+/* line 145, ../sass/_main.scss */
+#main-nav ul {
+  font-size: 13px;
+  line-height: 43px;
+  font-weight: bold;
+  display: inline-block;
+  overflow: hidden;
+}
+/* line 152, ../sass/_main.scss */
+#main-nav ul li {
+  float: left;
+  height: 100%;
+}
+/* line 156, ../sass/_main.scss */
+#main-nav ul li a {
+  padding: 0 13px;
+  display: block;
+  height: 100%;
+  color: #9c9c9c;
+  text-decoration: none;
+}
+/* line 163, ../sass/_main.scss */
+#main-nav ul li a:hover {
+  text-decoration: none;
+  background: #727272;
+}
+
+/* line 173, ../sass/_main.scss */
+#content-holder {
+  background: url("../images/bg-main-top.png") repeat-x;
+  padding: 6px 0 0;
+  height: 500px;
 }

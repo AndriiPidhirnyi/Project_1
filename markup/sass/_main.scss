@@ -15,7 +15,7 @@ body {
 
 .header-holder {
 	@extend #wrapper;
-	height: $header-holder-height;
+	// height: $header-holder-height;
 	@include border-top ($bg-header-border, 1px);
 	@include background-image(linear-gradient($bg-head-hold-top, $bg-head-hold-bot));
 	padding:11px 0 0;
@@ -23,6 +23,7 @@ body {
 	.header-box {
 		height: $header-height;
 		@include background-image(linear-gradient($bg-header-top, $bg-header-bot));
+		margin: 0 0 10px;
 
 		#header {
 			width: $page-width;
@@ -133,8 +134,48 @@ body {
 
 }
 
-.main-nav {
+#main-nav {
 	@extend #wrapper;
+	@include border-top($main-border-top, 1px);
+	@include border-bottom($main-border-bot, 1px);
+	height: $height-main-nav;
+	@include background-image(linear-gradient($bg-main-nav-st, $bg-main-nav-end));
+	text-align: center;
+
+	ul {
+		font-size: 13px;
+		line-height: $height-main-nav;
+		font-weight: bold;
+		display: inline-block;
+		overflow: hidden;
+
+		li{
+			float: left;
+			height: 100%;
+
+			a {
+				padding: 0 13px;
+				display: block;
+				height: 100%;
+				color: #9c9c9c;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: none;
+					background: #727272;
+				}
+			}
+		}
+	}
+
+}
+
+#content-holder {
+	background: url("../images/bg-main-top.png") repeat-x;
+	padding: 6px 0 0;
+	@extend #wrapper;
+	height: 500px;
+
 }
 
 .footer-holder {
