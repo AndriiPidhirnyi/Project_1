@@ -1,0 +1,27 @@
+@import "base";
+
+// import main stylesheet
+
+body {
+	background: url(../images/bg-body.gif);
+	font: 12px/14px Verdana, Arial, sans-serif;
+}
+
+#wrapper {
+	width: 100%;
+}
+
+.header-holder {
+	@extend #wrapper;
+	@include border-top($header-top-bor-col,2px);
+	@include border-bottom($header-bot-bor-col,2px);
+	height: 200px;
+}
+
+.main-nav {
+	@extend #wrapper;
+}
+
+.footer-holder {
+	@extend #wrapper;
+}

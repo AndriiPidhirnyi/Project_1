@@ -1,0 +1,13 @@
+@import "compass/reset";
+
+// border-top over block
+@mixin border-top ($border-color, $border-width: 1px) {
+	border-top: solid $border-color;
+	border-top-width: $border-width;
+}
+
+//
+@mixin border-bottom ($border-color, $border-width: 1px) {
+	border-bottom: solid $border-color;
+	border-bottom-width: $border-width;
+}
