@@ -5,7 +5,7 @@
 // import main stylesheet
 
 body {
-	background: url(../images/bg-body.gif);
+	background: url("../images/bg-body.gif");
 	font: 12px/14px Verdana, Arial, sans-serif;
 }
 
@@ -15,27 +15,26 @@ body {
 
 .header-holder {
 	@extend #wrapper;
-	// height: $header-holder-height;
+	padding:11px 0 0;
 	@include border-top ($bg-header-border, 1px);
 	@include background-image(linear-gradient($bg-head-hold-top, $bg-head-hold-bot));
-	padding:11px 0 0;
 
 	.header-box {
-		height: $header-height;
-		@include background-image(linear-gradient($bg-header-top, $bg-header-bot));
+		padding: 0 0 37px;
 		margin: 0 0 10px;
+		@include background-image(linear-gradient($bg-header-top, $bg-header-bot));
 
 		#header {
 			width: $page-width;
-			@include center-block();
 			overflow: hidden;
+			@include center-block();
 
 			#logo {
 				float: left;
-				width: 268px;
-				height: 60px;
+				width: $logo-width;
+				height: $logo-height;
 				margin: 34px 0 0 4px;
-				background: url(../images/logo.png);
+				background: url(../images/logo.png) no-repeat;
 
 				a {
 					display: block;
@@ -61,9 +60,9 @@ body {
 						height: 16px;
 						font-size:11px;
 						display: inline-block;
-						background: url("../images/sprites/logo-rss.png") no-repeat;
+						background: url("../images/sprites/logo-rss.png") 0 2px no-repeat;
 						color: #6e6e6e;
-						padding: 2px 0 0 27px;
+						padding: 2px 0 0 32px;
 						vertical-align: top;
 					}
 
@@ -82,6 +81,7 @@ body {
 
 							&:first-child {
 								background: none;
+								padding: 0 6px 0 0;
 							}
 
 							a {
@@ -125,28 +125,23 @@ body {
 					}
 				}
 			}
-
-
 		}
 	}
-
 
 }
 
 #main-nav {
 	@extend #wrapper;
+	text-align: center;
 	@include border-top($main-border-top, 1px);
 	@include border-bottom($main-border-bot, 1px);
-	height: $height-main-nav;
 	@include background-image(linear-gradient($bg-main-nav-st, $bg-main-nav-end));
-	text-align: center;
 
 	ul {
 		font-size: 13px;
 		line-height: $height-main-nav;
 		font-weight: bold;
 		display: inline-block;
-		overflow: hidden;
 
 		li{
 			float: left;
@@ -156,12 +151,12 @@ body {
 				padding: 0 13px;
 				display: block;
 				height: 100%;
-				color: #9c9c9c;
+				color: $main-link-color;
 				text-decoration: none;
 
 				&:hover {
 					text-decoration: none;
-					background: #727272;
+					background: $main-link-hover;
 				}
 			}
 		}
@@ -188,8 +183,8 @@ body {
 
 			li {
 				float: left;
-				width: 203px;
-				height: 237px;
+				width: $prod-width;
+				height: $prod-height;
 				background: rgba(0,0,0,0.2);
 				@include border-radius(10px);
 				padding: 10px;
@@ -198,13 +193,12 @@ body {
 				.loc-header-setter {
 					height: 26px;
 					background: rgba(0,0,0,0.47);
-					padding: 11px 0 0 12px;
+					padding: 11px 9px 0 12px;
 
 					span {
 						float: right;
 						width: 23px;
 						height: 20px;
-						margin: 0 9px 0 0;
 						font-weight: bold;
 						padding: 0 0 0 21px;
 						background: url("../images/sprites/icon-review.png") 0 2px no-repeat;
@@ -229,21 +223,24 @@ body {
 					margin: 0 0 13px;
 
 					.prod-img {
-						width: 203px;
-						height: 169px;
+						width: $prod-width;
+						height: $prod-img-height;
 						background: rgba(0,0,0,0.24);
 						display: table-cell;
 						text-align: center;
 						vertical-align: middle;
+
+						img {
+							vertical-align: top;
+						}
 					}
 				}
 
 				.loc-footer {
-					padding: 0 0 0 2px;
+					padding: 0 4px 0 2px;
 
 					.rate-text {
 						float: right;
-						margin: 0 5px 0 0;
 
 						a {
 							color: #5d5d5d;
@@ -256,16 +253,14 @@ body {
 							}
 						}
 					}
+				}
 			}
 		}
-		}
-
-
 
 		.page-holder {
 			background: rgba(0,0,0,0.2);
 			@include border-radius(10px);
-			height: 36px;
+			height: $paginat-height;
 			padding: 11px 0 0;
 			font-size: 14px;
 			line-height: 16px;
@@ -274,7 +269,7 @@ body {
 
 			.page-number {
 				float: right;
-				margin: 0 5px 0 0;
+				margin: 0 6px 0 0;
 
 				ul {
 					overflow: hidden;
@@ -282,32 +277,32 @@ body {
 
 				li {
 					float: left;
-					height: 27px;
-					width: 30px;
+					height: $page-numb-height;
+					width: $page-numb-width;
 					margin: 0 5px 0 0;
 
 					a{
 						display: block;
 						line-height: 27px;
-						color: #393939;
+						color: $pagin-link-color;
 						text-decoration: none;
-						background: #1c1c1c;
+						background: $pagin-link-bg;
 						text-align: center;
 
 						&:hover {
-							background: lighten(#1c1c1c, 30%);
+							background: $pagin-link-hover;
 						}
 					}
 				}
 
 				.active {
-					background: #0b0b0b;
+					background: $pagin-active-bg;
 				}
 			}
 
 			.page-info {
 				color: #4a4a4a;
-				padding: 5px 0 0 17px;
+				padding: 5px 17px 0;
 				overflow: hidden;
 
 				strong {
@@ -320,21 +315,23 @@ body {
 
 }
 
+/* footer */
 
 #footer {
 	@extend #wrapper;
-	background: #121212;
+	background: $footer-bg;
 	padding: 27px 0 0;
 
 		.services-holder {
 			width: $page-width;
-			@include center-block();
 			overflow: hidden;
-			padding: 0 25px 30px;
+			padding: 0 25px 28px;
+			@include center-block();
+			@include border-bottom (#000, 1px);
 
 			.list-box {
 				float: left;
-				width: 150px;
+				width: $list-box-width;
 				margin: 0 36px 0 0;
 
 				h2 {
@@ -345,12 +342,11 @@ body {
 				}
 
 				ul {
-					overflow: hidden;
 					li {
 
 						a {
 							text-decoration: none;
-							color: #4a4a4a;
+							color: $list-link-color;
 							font-size: 14px;
 							line-height: 20px;
 
@@ -376,44 +372,92 @@ body {
 			}
 
 			.topics {
-				width: 200px;
+				width: $topics-width;
 				margin: 0 61px 0 0;
 
 			}
 
 			.favicon-holder {
-				width: 205px;
+				width: $favicon-width;
+				margin: 0 71px 0 0;
 
 				h2 {
 					margin: 0 22px 20px 2px;
 				}
 			}
+
+			.twitter-update {
+				width: $twitter-width;
+				margin: 0;
+
+				.twitter-info {
+					background: $twitter-bg;
+					@include border-radius(9px);
+					padding: 17px 18px 9px;
+					position: relative;
+
+					p {
+						color: $twitter-text-color;
+						line-height: 20px;
+						margin: 0 0 20px;
+
+						&:last-child {
+							margin: 0 0 9px;
+						}
+
+						span {
+							color: #b9b9b9;
+						}
+
+						a {
+							text-decoration: none;
+							color: $twitter-text-color;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+
+					.triangle-bottomleft {
+						position: absolute;
+						right: 13px;
+						top: -17px;
+						width: 0;
+						height: 0;
+						border-bottom: 17px solid $twitter-bg;
+						border-right: 15px solid transparent;
+					}
+
+				}
+			}
 		}
 
 		.info-holder {
-			@include center-block();
-			background: #000;
-			height: 46px;
+			background: $info-holder-bg;
+			height: $info-holder-height;
 			padding: 0 10px;
 			overflow: hidden;
+			@include center-block();
+			@include border-top ($info-holder-border-top, 1px);
+
 
 			.info-setter {
 				width: $page-width;
+				padding: 16px 0 0;
 				@include center-block();
 			}
 
 			.info {
-				color: #4a4a4a;
+				color: $info-text-color;
 				font-size: 11px;
 				line-height: 14px;
-				padding: 15px 0 0;
 				overflow: hidden;
 			}
 
 			.sub-nav {
 				float: right;
-				// overflow: hidden;
-				padding: 16px 7px 0;
+				padding: 0 7px;
 				font-size: 11px;
 				line-height: 12px;
 
@@ -431,7 +475,7 @@ body {
 					}
 
 					a{
-						color: #4a4a4a;
+						color: $sub-nav-link-color;
 						text-decoration: none;
 						&:hover {
 							text-decoration: underline;
@@ -441,3 +485,5 @@ body {
 			}
 		}
 }
+
+

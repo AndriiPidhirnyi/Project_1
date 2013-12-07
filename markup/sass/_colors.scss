@@ -9,9 +9,6 @@ $bg-header-bot: #181818;
 // header border color
 $bg-header-border: #464646;
 
-// search-holder background
-$bg-search-top: #242424;
-$bg-search-bot: #181818;
 
 // text color ob sub navy
 $txt-color-sub-navy: #616161;
@@ -23,3 +20,35 @@ $main-border-bot: #161616;
 // main navigation background colors
 $bg-main-nav-st: #333;
 $bg-main-nav-end: #272727;
+
+// main navigation link
+$main-link-color: #9c9c9c;
+$main-link-hover: #727272;
+
+// pagination colors
+$pagin-link-color: #393939;
+$pagin-link-bg: #1c1c1c;
+$pagin-link-hover: lighten(#1c1c1c, 30%);
+$pagin-active-bg: #0b0b0b;
+
+// footer background
+$footer-bg: #121212;
+
+// link colors of list
+$list-link-color: #4a4a4a;
+
+// background of twitter block
+$twitter-bg: #1e1e1e;
+
+// text color in twitter block
+$twitter-text-color: #4a4a4a;
+
+// info-holder in footer background
+$info-holder-bg: #000;
+$info-holder-border-top: #202020;
+
+// text color in footer info
+$info-text-color: #4a4a4a;
+
+// sub-nav in footer
+$sub-nav-link-color: #4a4a4a;
