@@ -133,7 +133,7 @@ body {
 }
 
 /* line 12, ../sass/_main.scss */
-#wrapper, .header-holder, #main-nav, #content-holder, .footer-holder {
+#wrapper, .header-holder, #main-nav, #content-holder, #footer {
   width: 100%;
 }
 
@@ -305,23 +305,24 @@ body {
 
 /* line 172, ../sass/_main.scss */
 #content-holder {
-  background: url("../images/bg-main-top.png") repeat-x;
-  padding: 6px 0 0;
-  height: 500px;
+  background: url("../images/bg-main-top.png"), url("../images/bg-main-bot.png");
+  background-position: 0 0, 0 100%;
+  background-repeat: repeat-x, repeat-x;
+  padding: 6px 0 7px;
 }
-/* line 178, ../sass/_main.scss */
+/* line 181, ../sass/_main.scss */
 #content-holder .content {
-  padding: 20px 10px 0 6px;
+  padding: 20px 10px 20px 6px;
   width: 972px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 183, ../sass/_main.scss */
+/* line 186, ../sass/_main.scss */
 #content-holder .content .prod-list {
   overflow: hidden;
 }
-/* line 186, ../sass/_main.scss */
+/* line 189, ../sass/_main.scss */
 #content-holder .content .prod-list li {
   float: left;
   width: 203px;
@@ -335,13 +336,13 @@ body {
   padding: 10px;
   margin: 0 20px 20px 0;
 }
-/* line 195, ../sass/_main.scss */
+/* line 198, ../sass/_main.scss */
 #content-holder .content .prod-list li .loc-header-setter {
   height: 26px;
   background: rgba(0, 0, 0, 0.47);
   padding: 11px 0 0 12px;
 }
-/* line 200, ../sass/_main.scss */
+/* line 203, ../sass/_main.scss */
 #content-holder .content .prod-list li .loc-header-setter span {
   float: right;
   width: 23px;
@@ -352,24 +353,24 @@ body {
   background: url("../images/sprites/icon-review.png") 0 2px no-repeat;
   color: #545252;
 }
-/* line 211, ../sass/_main.scss */
+/* line 214, ../sass/_main.scss */
 #content-holder .content .prod-list li .loc-header-setter h2 {
   overflow: hidden;
 }
-/* line 214, ../sass/_main.scss */
+/* line 217, ../sass/_main.scss */
 #content-holder .content .prod-list li .loc-header-setter h2 a {
   color: #5d5d5d;
   text-decoration: none;
 }
-/* line 218, ../sass/_main.scss */
+/* line 221, ../sass/_main.scss */
 #content-holder .content .prod-list li .loc-header-setter h2 a:hover {
   text-decoration: underline;
 }
-/* line 225, ../sass/_main.scss */
+/* line 228, ../sass/_main.scss */
 #content-holder .content .prod-list li .prod-img-holder {
   margin: 0 0 13px;
 }
-/* line 228, ../sass/_main.scss */
+/* line 231, ../sass/_main.scss */
 #content-holder .content .prod-list li .prod-img-holder .prod-img {
   width: 203px;
   height: 169px;
@@ -378,27 +379,27 @@ body {
   text-align: center;
   vertical-align: middle;
 }
-/* line 238, ../sass/_main.scss */
+/* line 241, ../sass/_main.scss */
 #content-holder .content .prod-list li .loc-footer {
   padding: 0 0 0 2px;
 }
-/* line 241, ../sass/_main.scss */
+/* line 244, ../sass/_main.scss */
 #content-holder .content .prod-list li .loc-footer .rate-text {
   float: right;
   margin: 0 5px 0 0;
 }
-/* line 245, ../sass/_main.scss */
+/* line 248, ../sass/_main.scss */
 #content-holder .content .prod-list li .loc-footer .rate-text a {
   color: #5d5d5d;
   font-size: 11px;
   line-height: 14px;
   text-decoration: none;
 }
-/* line 251, ../sass/_main.scss */
+/* line 254, ../sass/_main.scss */
 #content-holder .content .prod-list li .loc-footer .rate-text a:hover {
   text-decoration: underline;
 }
-/* line 262, ../sass/_main.scss */
+/* line 265, ../sass/_main.scss */
 #content-holder .content .page-holder {
   background: rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 10px;
@@ -407,29 +408,29 @@ body {
   -o-border-radius: 10px;
   border-radius: 10px;
   height: 36px;
-  padding: 11px 0 0 17px;
+  padding: 11px 0 0;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
   margin: 0 17px 0 0;
 }
-/* line 272, ../sass/_main.scss */
+/* line 275, ../sass/_main.scss */
 #content-holder .content .page-holder .page-number {
   float: right;
   margin: 0 5px 0 0;
 }
-/* line 276, ../sass/_main.scss */
+/* line 279, ../sass/_main.scss */
 #content-holder .content .page-holder .page-number ul {
   overflow: hidden;
 }
-/* line 280, ../sass/_main.scss */
+/* line 283, ../sass/_main.scss */
 #content-holder .content .page-holder .page-number li {
   float: left;
   height: 27px;
   width: 30px;
   margin: 0 5px 0 0;
 }
-/* line 286, ../sass/_main.scss */
+/* line 289, ../sass/_main.scss */
 #content-holder .content .page-holder .page-number li a {
   display: block;
   line-height: 27px;
@@ -438,20 +439,144 @@ body {
   background: #1c1c1c;
   text-align: center;
 }
-/* line 294, ../sass/_main.scss */
+/* line 297, ../sass/_main.scss */
 #content-holder .content .page-holder .page-number li a:hover {
   background: dimgrey;
 }
-/* line 300, ../sass/_main.scss */
+/* line 303, ../sass/_main.scss */
 #content-holder .content .page-holder .page-number .active {
   background: #0b0b0b;
 }
-/* line 305, ../sass/_main.scss */
+/* line 308, ../sass/_main.scss */
 #content-holder .content .page-holder .page-info {
   color: #4a4a4a;
-  padding: 5px 0 0;
+  padding: 5px 0 0 17px;
+  overflow: hidden;
 }
-/* line 309, ../sass/_main.scss */
+/* line 313, ../sass/_main.scss */
 #content-holder .content .page-holder .page-info strong {
   color: #757575;
+}
+
+/* line 324, ../sass/_main.scss */
+#footer {
+  background: #121212;
+  padding: 27px 0 0;
+}
+/* line 329, ../sass/_main.scss */
+#footer .services-holder {
+  width: 972px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 0 25px 30px;
+}
+/* line 335, ../sass/_main.scss */
+#footer .services-holder .list-box {
+  float: left;
+  width: 150px;
+  margin: 0 36px 0 0;
+}
+/* line 340, ../sass/_main.scss */
+#footer .services-holder .list-box h2 {
+  font: 24px/28px Verdana, sans-serif;
+  color: #fff;
+  margin: 0 0 20px;
+}
+/* line 347, ../sass/_main.scss */
+#footer .services-holder .list-box ul {
+  overflow: hidden;
+}
+/* line 351, ../sass/_main.scss */
+#footer .services-holder .list-box ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 14px;
+  line-height: 20px;
+}
+/* line 357, ../sass/_main.scss */
+#footer .services-holder .list-box ul li a:hover {
+  text-decoration: underline;
+}
+/* line 362, ../sass/_main.scss */
+#footer .services-holder .list-box ul li span {
+  color: #a2a1a1;
+}
+/* line 368, ../sass/_main.scss */
+#footer .services-holder .list-box .favicon li {
+  float: left;
+  margin: 4px 4px 4px 5px;
+}
+/* line 372, ../sass/_main.scss */
+#footer .services-holder .list-box .favicon li img {
+  vertical-align: top;
+}
+/* line 378, ../sass/_main.scss */
+#footer .services-holder .topics {
+  width: 200px;
+  margin: 0 61px 0 0;
+}
+/* line 384, ../sass/_main.scss */
+#footer .services-holder .favicon-holder {
+  width: 205px;
+}
+/* line 387, ../sass/_main.scss */
+#footer .services-holder .favicon-holder h2 {
+  margin: 0 22px 20px 2px;
+}
+/* line 393, ../sass/_main.scss */
+#footer .info-holder {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000;
+  height: 46px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+/* line 400, ../sass/_main.scss */
+#footer .info-holder .info-setter {
+  width: 972px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 405, ../sass/_main.scss */
+#footer .info-holder .info {
+  color: #4a4a4a;
+  font-size: 11px;
+  line-height: 14px;
+  padding: 15px 0 0;
+  overflow: hidden;
+}
+/* line 413, ../sass/_main.scss */
+#footer .info-holder .sub-nav {
+  float: right;
+  padding: 16px 7px 0;
+  font-size: 11px;
+  line-height: 12px;
+}
+/* line 420, ../sass/_main.scss */
+#footer .info-holder .sub-nav .nav-list {
+  overflow: hidden;
+}
+/* line 424, ../sass/_main.scss */
+#footer .info-holder .sub-nav li {
+  float: left;
+  padding: 0 13px 0 14px;
+  background: url("../images/sep-footer-nav.gif") 0 2px no-repeat;
+}
+/* line 429, ../sass/_main.scss */
+#footer .info-holder .sub-nav li:first-child {
+  background: none;
+}
+/* line 433, ../sass/_main.scss */
+#footer .info-holder .sub-nav li a {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+/* line 436, ../sass/_main.scss */
+#footer .info-holder .sub-nav li a:hover {
+  text-decoration: underline;
 }

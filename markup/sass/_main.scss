@@ -170,13 +170,16 @@ body {
 }
 
 #content-holder {
-	background: url("../images/bg-main-top.png") repeat-x;
-	padding: 6px 0 0;
+	background:
+		url("../images/bg-main-top.png"),
+		url("../images/bg-main-bot.png");
+	background-position: 0 0, 0 100%;
+	background-repeat: repeat-x, repeat-x;
+	padding: 6px 0 7px;
 	@extend #wrapper;
-	height: 500px;
 
 	.content {
-		padding: 20px 10px 0 6px;
+		padding: 20px 10px 20px 6px;
 		width: $page-width;
 		@include center-block();
 
@@ -263,7 +266,7 @@ body {
 			background: rgba(0,0,0,0.2);
 			@include border-radius(10px);
 			height: 36px;
-			padding: 11px 0 0 17px;
+			padding: 11px 0 0;
 			font-size: 14px;
 			line-height: 16px;
 			font-weight: bold;
@@ -304,7 +307,8 @@ body {
 
 			.page-info {
 				color: #4a4a4a;
-				padding: 5px 0 0;
+				padding: 5px 0 0 17px;
+				overflow: hidden;
 
 				strong {
 					color: #757575;
@@ -316,6 +320,124 @@ body {
 
 }
 
-.footer-holder {
+
+#footer {
 	@extend #wrapper;
+	background: #121212;
+	padding: 27px 0 0;
+
+		.services-holder {
+			width: $page-width;
+			@include center-block();
+			overflow: hidden;
+			padding: 0 25px 30px;
+
+			.list-box {
+				float: left;
+				width: 150px;
+				margin: 0 36px 0 0;
+
+				h2 {
+					font: 24px/28px Verdana, sans-serif;
+					color: #fff;
+					margin: 0 0 20px;
+
+				}
+
+				ul {
+					overflow: hidden;
+					li {
+
+						a {
+							text-decoration: none;
+							color: #4a4a4a;
+							font-size: 14px;
+							line-height: 20px;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+
+						span {
+							color: #a2a1a1;
+						}
+					}
+				}
+
+				.favicon li {
+					float: left;
+					margin: 4px 4px 4px 5px;
+
+						img {
+							vertical-align: top;
+						}
+				}
+			}
+
+			.topics {
+				width: 200px;
+				margin: 0 61px 0 0;
+
+			}
+
+			.favicon-holder {
+				width: 205px;
+
+				h2 {
+					margin: 0 22px 20px 2px;
+				}
+			}
+		}
+
+		.info-holder {
+			@include center-block();
+			background: #000;
+			height: 46px;
+			padding: 0 10px;
+			overflow: hidden;
+
+			.info-setter {
+				width: $page-width;
+				@include center-block();
+			}
+
+			.info {
+				color: #4a4a4a;
+				font-size: 11px;
+				line-height: 14px;
+				padding: 15px 0 0;
+				overflow: hidden;
+			}
+
+			.sub-nav {
+				float: right;
+				// overflow: hidden;
+				padding: 16px 7px 0;
+				font-size: 11px;
+				line-height: 12px;
+
+				.nav-list {
+					overflow: hidden;
+				}
+
+				li {
+					float: left;
+					padding: 0 13px 0 14px;
+					background: url("../images/sep-footer-nav.gif") 0 2px no-repeat;
+
+					&:first-child {
+						background: none;
+					}
+
+					a{
+						color: #4a4a4a;
+						text-decoration: none;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
 }
